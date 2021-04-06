@@ -1,0 +1,15 @@
+<form #f="ngForm" (ngSubmit)="submit(f.form);" ngNativeValidate>
+    <div class="form-group">
+        <label form="email" class="h5">Please enter your email address to see your recent orders</label>
+        <input type="email" class="form-control"
+            placeholder="me@email.example.com"
+            name="email"
+            id="email"
+            required
+            autofocus
+            ngModel />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+        <strong>SEND</strong>
+    </button>
+</form>

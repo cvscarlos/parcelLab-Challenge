@@ -1,0 +1,47 @@
+<app-loading [show]="loading"></app-loading>
+
+<div *ngIf="order">
+    <p>
+        <span class="text-secondary">Order Number</span>
+        <strong class="d-block">{{order.orderNo}}</strong>
+    </p>
+    <p>
+        <span class="text-secondary">Delivery Address</span>
+        <strong class="d-block">{{order.street}} {{order.zip_code}} {{order.city}}</strong>
+    </p>
+
+    <div class="wrapper">
+        <p>
+            <span class="text-secondary">Tracking Number</span>
+            <strong class="d-block">{{order.tracking_number}}</strong>
+        </p>
+        <p>
+            <span class="text-secondary">Current Status</span>
+            <strong class="d-block">{{order.tracking.status_text}}</strong>
+            {{order.tracking.status_details}}
+        </p>
+    </div>
+
+    <div class="wrapper">
+        <h6 class="text-secondary">Articles</h6>
+
+        <div class="row mb-2" *ngFor="let item of order.items">
+            <div class="col-auto">
+                <span class="m-2">x{{item.quantity}}</span>
+                <img src="{{item.articleImageUrl}}" alt="{{item.product_name}}" />
+            </div>
+            <div class="col">
+                <strong>{{item.product_name}}</strong>
+                <span class="d-block text-secondary">{{item.articleNo}}</span>
+            </div>
+        </div>
+
+        <div *ngIf="!order.items.length">
+            <p>No articles on this order</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!order">
+    <p class="h3">Order not found</p>
+</div>

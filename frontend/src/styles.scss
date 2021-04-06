@@ -1,0 +1,20 @@
+$primary: #000C41;
+
+@import "bootstrap";
+
+.wrapper {
+    @extend .mb-3;
+    @extend .p-3;
+    @extend .rounded-lg;
+    @extend .shadow;
+}
+
+.main-wrapper {
+    @extend .mx-auto;
+    @extend .my-3;
+    @extend .p-3;
+    @extend .rounded-lg;
+    @extend .shadow;
+    max-width: 640px;
+    position: relative;
+}

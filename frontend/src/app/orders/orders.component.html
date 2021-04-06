@@ -1,0 +1,33 @@
+<app-loading [show]="loading"></app-loading>
+
+<h4>Your Orders</h4>
+
+<div class="wrapper" style="cursor: pointer;" (click)="goToOrder(order)" *ngFor="let order of orders">
+    <div class="row">
+        <div class="col">
+            <p>
+                <span class="text-secondary">Order Number</span>
+                <strong class="d-block">{{order.orderNo}}</strong>
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                <span class="text-secondary">Current Status</span>
+                <strong class="d-block">{{order.tracking.status_text}}</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p>
+                <span class="text-secondary">Delivery Address</span>
+                <strong class="d-block">{{order.street}} {{order.zip_code}} {{order.city}}</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!loading && !orders.length" class="my-5">
+    <p class="h6">You have no orders!</p>
+</div>

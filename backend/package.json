@@ -1,0 +1,26 @@
+{
+    "name": "parcellab-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+        "node": ">=v13.x"
+    },
+    "scripts": {
+        "start": "node ./src/app.mjs",
+        "test": "env PORT=3001 mocha test.mjs --exit"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
+        "eslint": "^7.23.0",
+        "eslint-config-google": "^0.14.0",
+        "mocha": "^8.3.2"
+    }
+}
