@@ -1,6 +1,6 @@
 # parcelLab Challenge
 
-# How to run
+## How to run
 **Option A:**
 
 Run the script `run-app.sh`
@@ -19,5 +19,5 @@ npm install
 npm run start
 ```
 
-# How to test
+## How to test
 Open the directory `backend` and execute the command `npm run test`
